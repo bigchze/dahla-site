@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ title }} | DAHLA - Durango Area Hospitality and Lodgers Association</title>
+<meta name="description" content="{{ description or 'The Durango Area Hospitality and Lodgers Association represents lodging and hospitality businesses across the Durango, Colorado area.' }}">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="stylesheet" href="/assets/styles.css">
+<link rel="stylesheet" href="/assets/content.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a href="/"><img class="logo" src="/assets/dahla-logo.svg" alt="DAHLA - Durango Area Hospitality and Lodgers Association"></a>
+    <nav class="site-nav">
+      <a href="/"{% if page.url == "/" %} class="active"{% endif %}>Home</a>
+      <a href="/about/"{% if page.url == "/about/" %} class="active"{% endif %}>About</a>
+      <a href="/advocacy/"{% if page.url == "/advocacy/" %} class="active"{% endif %}>Advocacy</a>
+      <a href="/directory/"{% if page.url == "/directory/" %} class="active"{% endif %}>Member Directory</a>
+      <a href="/events/"{% if "/events/" in page.url %} class="active"{% endif %}>Events</a>
+      <a href="/resources/"{% if page.url == "/resources/" %} class="active"{% endif %}>Resources</a>
+      <a href="/membership/"{% if page.url == "/membership/" %} class="active"{% endif %}>Membership</a>
+    </nav>
+  </div>
+</header>
+
+{% if hero_photo %}
+<section class="hero">
+  <img class="hero-photo" src="{{ hero_photo }}" alt="{{ hero_photo_alt or '' }}">
+  <div class="hero-content">
+    <h1>{{ hero_title or title }}</h1>
+    {% if hero_subtitle %}<p>{{ hero_subtitle }}</p>{% endif %}
+    {% if hero_buttons %}
+      {% for b in hero_buttons %}
+        <a class="btn{% if b.style %} {{ b.style }}{% endif %}" href="{{ b.href }}">{{ b.label }}</a>
+      {% endfor %}
+    {% endif %}
+  </div>
+</section>
+{% else %}
+<section class="hero small" style="background:var(--navy);">
+  <div class="hero-content">
+    <h1>{{ hero_title or title }}</h1>
+    {% if hero_subtitle %}<p>{{ hero_subtitle }}</p>{% endif %}
+  </div>
+</section>
+{% endif %}
+
+<main>
+{{ content | safe }}
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <img class="logo" src="/assets/dahla-logo-white.svg" alt="DAHLA">
+      <p>The Durango Area Hospitality and Lodgers Association represents the common interest of lodging and hospitality members across the Durango area through political action, education, and ethical business practice.</p>
+    </div>
+    <div>
+      <h3 style="color:#fff;">Quick Links</h3>
+      <p><a href="/about/">About DAHLA</a></p>
+      <p><a href="/advocacy/">Advocacy &amp; Policy</a></p>
+      <p><a href="/directory/">Member Directory</a></p>
+      <p><a href="/membership/">Join DAHLA</a></p>
+    </div>
+    <div>
+      <h3 style="color:#fff;">Contact</h3>
+      <p>info@durangolodging.org<br>Durango, Colorado</p>
+      <p><a href="https://www.durango.org" target="_blank" rel="noopener">Visit Durango</a><br>
+      <a href="https://www.durangobusiness.org" target="_blank" rel="noopener">Durango Chamber of Commerce</a></p>
+    </div>
+  </div>
+  <div class="container footer-note">
+    &copy; 2026 Durango Area Hospitality and Lodgers Association (DAHLA). Site under active development.
+  </div>
+</footer>
+</body>
+</html>

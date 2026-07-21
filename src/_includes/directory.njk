@@ -1,0 +1,30 @@
+---
+layout: base.njk
+---
+<section class="block">
+  <div class="container">
+    <span class="eyebrow">Member Properties</span>
+    <h2>DAHLA Lodging Members</h2>
+    <p class="source-note" style="margin-bottom:20px;">Listed at the business level. To update your property's listing, <a href="/membership/">get in touch</a>.</p>
+    <table class="data">
+      <tr><th>Property</th><th>Category</th><th>Phone</th></tr>
+      {% for m in members %}
+      <tr><td>{{ m.name }}</td><td>{{ m.category }}</td><td>{{ m.phone or "—" }}</td></tr>
+      {% endfor %}
+    </table>
+  </div>
+</section>
+
+<section class="block alt">
+  <div class="container">
+    <span class="eyebrow">Community Partners</span>
+    <h2>Hospitality Partners</h2>
+    <p style="margin-bottom:20px;">Organizations DAHLA works alongside across the Durango hospitality and tourism ecosystem.</p>
+    <table class="data">
+      <tr><th>Organization</th><th>Phone</th></tr>
+      {% for p in partners %}
+      <tr><td>{{ p.name }}</td><td>{{ p.phone or "—" }}</td></tr>
+      {% endfor %}
+    </table>
+  </div>
+</section>

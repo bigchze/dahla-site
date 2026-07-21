@@ -1,0 +1,41 @@
+---
+layout: base.njk
+---
+<section class="block">
+  <div class="container prose">
+    {{ content | safe }}
+  </div>
+</section>
+
+{% if stats %}
+<section class="block alt">
+  <div class="container">
+    <span class="eyebrow">Why It Matters</span>
+    <h2>{{ stats_title or "Hospitality Powers the Local Economy" }}</h2>
+    <div class="grid cols-3">
+      {% for s in stats %}
+      <div class="stat"><span class="num">{{ s.number }}</span><span class="label">{{ s.label }}</span></div>
+      {% endfor %}
+    </div>
+    {% if stats_source %}<p class="source-note" style="margin-top:18px;">{{ stats_source }}</p>{% endif %}
+  </div>
+</section>
+{% endif %}
+
+{% if quick_links %}
+<section class="block">
+  <div class="container">
+    <span class="eyebrow">Get Involved</span>
+    <h2>Where to Start</h2>
+    <div class="grid cols-3">
+      {% for q in quick_links %}
+      <div class="card">
+        <h3>{{ q.title }}</h3>
+        <p>{{ q.description }}</p>
+        <a href="{{ q.href }}">{{ q.link_text or "Learn more" }} &rarr;</a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}

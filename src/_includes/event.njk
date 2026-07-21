@@ -1,0 +1,14 @@
+---
+layout: base.njk
+---
+<section class="block">
+  <div class="container">
+    <a href="/events/">&larr; Back to all events</a>
+    <span class="eyebrow" style="margin-top:18px;">{{ event_date }}</span>
+    <h2>{{ title }}</h2>
+    {% if location %}<p><strong>Location:</strong> {{ location }}</p>{% endif %}
+    <div class="prose">
+      {{ content | safe }}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,27 @@
+---
+layout: base.njk
+---
+<section class="block">
+  <div class="container">
+    <div class="prose">{{ content | safe }}</div>
+
+    {% if member_meeting_note %}
+    <div class="callout" style="margin:24px 0 36px;">
+      <h3>{{ member_meeting_title or "Member Meetings" }}</h3>
+      <p style="margin-bottom:0;">{{ member_meeting_note }}</p>
+    </div>
+    {% endif %}
+
+    <h2>Upcoming &amp; Annual Events</h2>
+    <div class="event-list">
+      {% for event in collections.events | reverse %}
+        <div class="event-card">
+          <span class="event-date">{{ event.data.event_date }}</span>
+          <h3><a href="{{ event.url }}">{{ event.data.title }}</a></h3>
+          {% if event.data.location %}<p style="margin-bottom:6px;color:var(--muted);">{{ event.data.location }}</p>{% endif %}
+          <p style="margin-bottom:0;">{{ event.data.summary }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
