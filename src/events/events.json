@@ -1,0 +1,7 @@
+{
+  "layout": "event.njk",
+  "tags": ["events"],
+  "eleventyComputed": {
+    "permalink": "/events/{{ page.fileSlug }}/"
+  }
+}
