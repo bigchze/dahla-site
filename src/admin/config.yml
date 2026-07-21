@@ -1,0 +1,123 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "src/assets/uploads"
+public_folder: "/assets/uploads"
+
+site_url: https://durangolodging.org
+display_url: https://durangolodging.org
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - name: "home"
+        label: "Home Page"
+        file: "src/index.md"
+        fields:
+          - { label: "Hero Photo URL", name: "hero_photo", widget: "string" }
+          - { label: "Hero Photo Alt Text", name: "hero_photo_alt", widget: "string", required: false }
+          - { label: "Hero Title", name: "hero_title", widget: "string" }
+          - { label: "Hero Subtitle", name: "hero_subtitle", widget: "text" }
+          - label: "Hero Buttons"
+            name: "hero_buttons"
+            widget: "list"
+            required: false
+            fields:
+              - { label: "Button Label", name: "label", widget: "string" }
+              - { label: "Link", name: "href", widget: "string" }
+              - { label: "Style (leave blank for solid, or 'secondary')", name: "style", widget: "string", required: false }
+          - { label: "Stats Section Title", name: "stats_title", widget: "string", required: false }
+          - label: "Stats"
+            name: "stats"
+            widget: "list"
+            required: false
+            fields:
+              - { label: "Number", name: "number", widget: "string" }
+              - { label: "Label", name: "label", widget: "string" }
+          - { label: "Stats Source Note", name: "stats_source", widget: "string", required: false }
+          - label: "Quick Links"
+            name: "quick_links"
+            widget: "list"
+            required: false
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Link", name: "href", widget: "string" }
+              - { label: "Link Text", name: "link_text", widget: "string", required: false }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+      - name: "about"
+        label: "About Page"
+        file: "src/about.md"
+        fields:
+          - { label: "Hero Title", name: "hero_title", widget: "string" }
+          - { label: "Hero Subtitle", name: "hero_subtitle", widget: "text" }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+      - name: "advocacy"
+        label: "Advocacy & Policy Page"
+        file: "src/advocacy.md"
+        fields:
+          - { label: "Hero Title", name: "hero_title", widget: "string" }
+          - { label: "Hero Subtitle", name: "hero_subtitle", widget: "text" }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+      - name: "resources"
+        label: "Resources Page"
+        file: "src/resources.md"
+        fields:
+          - { label: "Hero Title", name: "hero_title", widget: "string" }
+          - { label: "Hero Subtitle", name: "hero_subtitle", widget: "text" }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+      - name: "membership"
+        label: "Membership Page"
+        file: "src/membership.md"
+        fields:
+          - { label: "Hero Title", name: "hero_title", widget: "string" }
+          - { label: "Hero Subtitle", name: "hero_subtitle", widget: "text" }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+      - name: "events_intro"
+        label: "Events Page (intro text)"
+        file: "src/events-page.md"
+        fields:
+          - { label: "Hero Title", name: "hero_title", widget: "string" }
+          - { label: "Hero Subtitle", name: "hero_subtitle", widget: "text" }
+          - { label: "Member Meeting Box Title", name: "member_meeting_title", widget: "string", required: false }
+          - { label: "Member Meeting Box Text", name: "member_meeting_note", widget: "text", required: false }
+          - { label: "Body", name: "body", widget: "markdown", required: false }
+
+      - name: "directory"
+        label: "Member Directory"
+        file: "src/directory.md"
+        fields:
+          - { label: "Hero Title", name: "hero_title", widget: "string" }
+          - { label: "Hero Subtitle", name: "hero_subtitle", widget: "text" }
+          - label: "Member Properties"
+            name: "members"
+            widget: "list"
+            fields:
+              - { label: "Property Name", name: "name", widget: "string" }
+              - { label: "Category", name: "category", widget: "string" }
+              - { label: "Phone", name: "phone", widget: "string", required: false }
+          - label: "Hospitality Partners"
+            name: "partners"
+            widget: "list"
+            fields:
+              - { label: "Organization Name", name: "name", widget: "string" }
+              - { label: "Phone", name: "phone", widget: "string", required: false }
+
+  - name: "events"
+    label: "Events"
+    folder: "src/events"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date / When", name: "event_date", widget: "string", hint: "e.g. 'Memorial Day Weekend' or a specific date" }
+      - { label: "Location", name: "location", widget: "string", required: false }
+      - { label: "Short Summary (shown on events list)", name: "summary", widget: "text" }
+      - { label: "Full Description", name: "body", widget: "markdown" }
