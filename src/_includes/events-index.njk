@@ -5,10 +5,21 @@ layout: base.njk
   <div class="container">
     <div class="prose">{{ content | safe }}</div>
 
-    {% if member_meeting_note %}
+    <h2>{{ meetings_title or "DAHLA Meetings & Board Events" }}</h2>
+    {% if meetings and meetings.length > 0 %}
+    <div class="event-list" style="margin-bottom:36px;">
+      {% for m in meetings %}
+        <div class="event-card">
+          <span class="event-date">{{ m.date }}</span>
+          <h3>{{ m.title }}</h3>
+          {% if m.location %}<p style="margin-bottom:6px;color:var(--muted);">{{ m.location }}</p>{% endif %}
+          {% if m.notes %}<p style="margin-bottom:0;">{{ m.notes }}</p>{% endif %}
+        </div>
+      {% endfor %}
+    </div>
+    {% else %}
     <div class="callout" style="margin:24px 0 36px;">
-      <h3>{{ member_meeting_title or "Member Meetings" }}</h3>
-      <p style="margin-bottom:0;">{{ member_meeting_note }}</p>
+      <p style="margin-bottom:0;">{{ meetings_note or "Meeting dates will be posted here as they're confirmed." }}</p>
     </div>
     {% endif %}
 

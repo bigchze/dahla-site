@@ -1,0 +1,37 @@
+---
+layout: base.njk
+---
+<section class="block">
+  <div class="container">
+    <div class="prose">{{ content | safe }}</div>
+
+    {% if newsletters and newsletters.length > 0 %}
+      {% set latest = newsletters[0] %}
+      <div class="callout" style="margin:24px 0 40px;">
+        <span style="text-transform:uppercase;letter-spacing:0.05em;font-size:0.78rem;color:#ffd8b3;font-weight:700;">Latest Newsletter</span>
+        <h3 style="margin-top:8px;">{{ latest.title }}</h3>
+        {% if latest.date %}<p style="color:#e8d9c8;margin-bottom:10px;">{{ latest.date }}</p>{% endif %}
+        {% if latest.summary %}<p>{{ latest.summary }}</p>{% endif %}
+        {% if latest.pdf_file %}<a class="btn" href="{{ latest.pdf_file }}" target="_blank" rel="noopener">Download PDF</a>{% endif %}
+      </div>
+
+      {% if newsletters.length > 1 %}
+      <h2>Newsletter Archive</h2>
+      <div class="event-list">
+        {% for n in newsletters %}
+          {% if not loop.first %}
+          <div class="event-card">
+            <span class="event-date">{{ n.date }}</span>
+            <h3>{{ n.title }}</h3>
+            {% if n.summary %}<p style="margin-bottom:8px;">{{ n.summary }}</p>{% endif %}
+            {% if n.pdf_file %}<a href="{{ n.pdf_file }}" target="_blank" rel="noopener">Download PDF &rarr;</a>{% endif %}
+          </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+      {% endif %}
+    {% else %}
+      <p>No newsletters have been published yet. Check back soon.</p>
+    {% endif %}
+  </div>
+</section>

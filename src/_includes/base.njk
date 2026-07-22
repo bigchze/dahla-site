@@ -18,7 +18,8 @@
       <a href="/about/"{% if page.url == "/about/" %} class="active"{% endif %}>About</a>
       <a href="/advocacy/"{% if page.url == "/advocacy/" %} class="active"{% endif %}>Advocacy</a>
       <a href="/directory/"{% if page.url == "/directory/" %} class="active"{% endif %}>Member Directory</a>
-      <a href="/events/"{% if "/events/" in page.url %} class="active"{% endif %}>Events</a>
+      <a href="/events/"{% if page.url and "/events/" in page.url %} class="active"{% endif %}>Events</a>
+      <a href="/newsletters/"{% if page.url == "/newsletters/" %} class="active"{% endif %}>Newsletters</a>
       <a href="/resources/"{% if page.url == "/resources/" %} class="active"{% endif %}>Resources</a>
       <a href="/membership/"{% if page.url == "/membership/" %} class="active"{% endif %}>Membership</a>
     </nav>
