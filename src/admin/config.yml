@@ -86,8 +86,36 @@ collections:
         fields:
           - { label: "Hero Title", name: "hero_title", widget: "string" }
           - { label: "Hero Subtitle", name: "hero_subtitle", widget: "text" }
-          - { label: "Member Meeting Box Title", name: "member_meeting_title", widget: "string", required: false }
-          - { label: "Member Meeting Box Text", name: "member_meeting_note", widget: "text", required: false }
+          - { label: "Meetings Section Title", name: "meetings_title", widget: "string", required: false }
+          - { label: "Meetings Placeholder Text (shown only if the list below is empty)", name: "meetings_note", widget: "text", required: false }
+          - label: "Meetings & Board Events List"
+            name: "meetings"
+            widget: "list"
+            required: false
+            hint: "Add a row for each board meeting or DAHLA event. These show above the regional Events list."
+            fields:
+              - { label: "Date / When", name: "date", widget: "string", hint: "e.g. 'August 12, 2026' or 'Second Tuesday, monthly'" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Location", name: "location", widget: "string", required: false }
+              - { label: "Notes", name: "notes", widget: "text", required: false }
+          - { label: "Body", name: "body", widget: "markdown", required: false }
+
+      - name: "newsletters_page"
+        label: "Newsletters Page"
+        file: "src/newsletters.md"
+        fields:
+          - { label: "Hero Title", name: "hero_title", widget: "string" }
+          - { label: "Hero Subtitle", name: "hero_subtitle", widget: "text" }
+          - label: "Newsletters"
+            name: "newsletters"
+            widget: "list"
+            required: false
+            hint: "Keep the most recent newsletter at the TOP of this list — it will be featured as the 'Latest Newsletter.' Everything below it appears in the archive."
+            fields:
+              - { label: "Title", name: "title", widget: "string", hint: "e.g. 'DAHLA Newsletter — July 2026'" }
+              - { label: "Date", name: "date", widget: "string", hint: "e.g. 'July 2026'" }
+              - { label: "PDF File", name: "pdf_file", widget: "file", hint: "Upload the newsletter PDF" }
+              - { label: "Short Summary (optional)", name: "summary", widget: "text", required: false }
           - { label: "Body", name: "body", widget: "markdown", required: false }
 
       - name: "directory"
