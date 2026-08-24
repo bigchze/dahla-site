@@ -30,7 +30,8 @@ layout: base.njk
           <span class="event-date">{{ event.data.event_date }}</span>
           <h3><a href="{{ event.url }}">{{ event.data.title }}</a></h3>
           {% if event.data.location %}<p style="margin-bottom:6px;color:var(--muted);">{{ event.data.location }}</p>{% endif %}
-          <p style="margin-bottom:0;">{{ event.data.summary }}</p>
+          <div class="prose">{{ event.templateContent | safe }}</div>
+          {% if event.data.more_info_url %}<a class="btn" href="{{ event.data.more_info_url }}" target="_blank" rel="noopener">More Info &amp; Official Site &rarr;</a>{% endif %}
         </div>
       {% endfor %}
     </div>
