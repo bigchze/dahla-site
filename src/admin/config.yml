@@ -148,4 +148,5 @@ collections:
       - { label: "Date / When", name: "event_date", widget: "string", hint: "e.g. 'Memorial Day Weekend' or a specific date" }
       - { label: "Location", name: "location", widget: "string", required: false }
       - { label: "Short Summary (shown on events list)", name: "summary", widget: "text" }
+      - { label: "More Info Link", name: "more_info_url", widget: "string", required: false, hint: "Link to the event's official website (shown as a button on the events list and detail page)" }
       - { label: "Full Description", name: "body", widget: "markdown" }
