@@ -1,4 +1,5 @@
 ---
+date: 2026-09-30
 title: Durango Cowboy Gathering
 event_date: September 30 – October 4, 2026
 location: Downtown Durango (VFW, Strater Hotel, Wildhorse Saloon, Four Leaves Winery, and other venues)
