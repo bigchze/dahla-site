@@ -1,4 +1,5 @@
 ---
+date: 2026-10-16
 title: Durango Open Studio Tour
 event_date: October 16–18, 2026
 location: Artist studios throughout the greater Durango area (self-guided)
