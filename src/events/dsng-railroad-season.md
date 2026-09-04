@@ -1,4 +1,5 @@
 ---
+date: 2026-01-01
 title: Durango & Silverton Narrow Gauge Railroad Season
 event_date: Year-Round (Busiest Summer & Fall)
 location: Downtown Durango
