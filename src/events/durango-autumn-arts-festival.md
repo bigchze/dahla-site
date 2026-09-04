@@ -1,4 +1,5 @@
 ---
+date: 2026-09-19
 title: Durango Autumn Arts Festival
 event_date: September 19–20, 2026
 location: Historic Downtown Durango (E. 2nd Avenue)
