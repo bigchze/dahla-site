@@ -1,6 +1,6 @@
 ---
 title: Iron Horse Bicycle Classic
-event_date: Memorial Day Weekend (May 24–26, 2026)
+event_date: Memorial Day Weekend (May 29–31, 2027)
 location: Durango to Silverton
 summary: One of the region's biggest annual draws for lodging demand — cyclists race the train from Durango to Silverton.
 more_info_url: https://www.ironhorsebicycleclassic.com/
