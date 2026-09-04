@@ -1,4 +1,5 @@
 ---
+date: 2026-11-21
 title: Purgatory Resort Ski Season
 event_date: Winter Season (late November – early April)
 location: Purgatory Resort, 25 miles north of Durango
