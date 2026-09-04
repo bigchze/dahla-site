@@ -5,33 +5,6 @@ hero_title: Events & Meetings
 hero_subtitle: Regional events that shape staffing and occupancy, plus DAHLA
   board meetings and member events.
 meetings_title: DAHLA Meetings & Board Events
-meetings:
-  - date: Thursday, August 27, 9:00–9:45 a.m.
-    title: Destination Marketing Working Group
-    location: Electra Conference Room, Visit Durango offices, 900 Main Ave. (above
-      Durango Treasures)
-    notes: Led by Visit Durango marketing staff. The team will present an objective,
-      followed by questions and concepts for working group members to provide
-      feedback (an outline will be provided prior to the meeting). Please come
-      prepared to share your organization's current marketing initiatives,
-      needs, and ideas.
-  - date: Thursday, August 27, 10:00–10:45 a.m.
-    title: Destination Metrics Working Group
-    location: Electra Conference Room, Visit Durango offices, 900 Main Ave. (above
-      Durango Treasures)
-    notes: Led by Visit Durango and other members of the Prosperity Office. The team
-      will share the data currently being tracked and how it is reported. Please
-      come prepared with the data sets your organization is currently using, the
-      decisions you make using data, and what reports would be helpful.
-  - date: Thursday, August 27, 11:00–11:45 a.m.
-    title: Destination Management Working Group
-    location: Electra Conference Room, Visit Durango offices, 900 Main Ave. (above
-      Durango Treasures)
-    notes: Led by Visit Durango's Destination Management team. They will present an
-      objective followed by questions and concepts for working group members to
-      provide feedback. Please come prepared with community insight, partnership
-      opportunities, and ideas for destination management and sustainability
-      advocacy.
 title: Events & Meetings
 meetings_note: "DAHLA members have told us clearly: a consistent, predictable
   meeting schedule matters. We're finalizing a regular cadence and will post
