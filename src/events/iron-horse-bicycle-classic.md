@@ -1,4 +1,5 @@
 ---
+date: 2027-05-29
 title: Iron Horse Bicycle Classic
 event_date: Memorial Day Weekend (May 29–31, 2027)
 location: Durango to Silverton
