@@ -1,4 +1,5 @@
 ---
+date: 2026-09-03
 title: Four Corners Motorcycle Rally
 event_date: Labor Day Weekend (September 3–6, 2026)
 location: La Plata County Fairgrounds & Durango Harley-Davidson
